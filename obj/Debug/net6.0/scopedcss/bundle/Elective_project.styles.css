@@ -1,0 +1,55 @@
+/* _content/Elective_project/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-voozo2bcmr] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-voozo2bcmr] {
+  color: white;
+}
+
+.btn-primary[b-voozo2bcmr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-voozo2bcmr], .nav-pills .show > .nav-link[b-voozo2bcmr] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-voozo2bcmr] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-voozo2bcmr] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-voozo2bcmr] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-voozo2bcmr] {
+  font-size: 1rem;
+  line-height: inherit; 
+}
+.container .pb-3[b-voozo2bcmr] {
+    width: 100%;
+    background: url(../images/1.jpg) no-repeat center;
+}
+body[b-voozo2bcmr]{
+    background-color:white;
+}
+.footer[b-voozo2bcmr] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
