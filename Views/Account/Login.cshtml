@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Login"; 
+}     
+             
+<div class="login" style="padding-top:100px ; padding-bottom:70px">
+    <h1 style="font-size:50px;color:white">Login</h1>
+
+
+    
+    <div class="text-danger" asp-validation-summary="All"></div>
+          
+<form method="post">
+        <div class="form-group" style="padding-top:60px;color:white">
+        <label>Email</label>
+        <input name="email" class="form-control" />
+    </div>
+    <div class="form-group" style="padding-top:10px;color:white">
+        <label>Password</label>
+        <input name="password" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+</form>
+
+    <h6 style="font-size:20px;color:white">Don't you have an account? <a style="font-size:20px;color:#F9C80E" class="nav-link " asp-area="" asp-controller="Admin" asp-action="Create">Sign up</a> </h6>
+</div>
+
+
