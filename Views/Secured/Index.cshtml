@@ -1,0 +1,76 @@
+﻿@model IEnumerable<adminautentication.Models.CustomerEntity>
+
+@{
+    ViewData["Title"] = "Index"; 
+} 
+
+<div class="orders" style=" ">
+    <h1 style=" padding-bottom:20px;  color:white;padding-top:100px">Recent Orders</h1>
+ 
+
+    <table class="table" style="">
+        
+    <thead>
+        <tr> 
+            <th> 
+                    <h3 style="color:white"> @Html.DisplayNameFor(model => model.Id)</h3>
+            </th>
+            <th>
+                    <h3 style="padding-left:20px ;color:white">  @Html.DisplayNameFor(model => model.FullName)</h3>
+            </th>
+            <th>
+                    <h3 style="padding-left:20px; color:white">  @Html.DisplayNameFor(model => model.Phonenumber)</h3>
+            </th>
+            
+            <th>
+                    <h3 style="padding-left:20px ; color:white">  @Html.DisplayNameFor(model => model.Dateofevent)</h3>
+            </th>
+            <th>
+                    <h3 style="padding-left:20px ; color:white">  @Html.DisplayNameFor(model => model.Eventlocation)</h3>
+            </th>
+            <th>
+                    <h3 style="padding-left:20px; ; color:white"> @Html.DisplayNameFor(model => model.Typeofevent)</h3>
+            </th>
+            <th>
+                    <h3 style="padding-left:20px; ; color:white"> @Html.DisplayNameFor(model => model.Numberofguest)</h3>
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+                <tr style="color:white;padding-left:30px">
+                    <td style="color:white;padding-right:20px">
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+                    <td style="color:white;padding-left:20px">
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phonenumber)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Dateofevent)
+            </td>
+                    <td style="color:white;padding-left:60px">
+                @Html.DisplayFor(modelItem => item.Eventlocation)
+            </td>
+                    <td style="color:white;padding-left:60px">
+                @Html.DisplayFor(modelItem => item.Typeofevent)
+            </td>
+                    <td style="color:white;padding-left:60px">
+                @Html.DisplayFor(modelItem => item.Numberofguest)
+            
+            <td>
+                        <h3  style="color:white; padding-right:20px; font-size:20px">   @Html.ActionLink("Edit", "Edit", new { FullName=item.FullName }) </h3>
+                    <h3   style="color:white; padding-right:20px; font-size:20px"> @Html.ActionLink("OrderDetails", "OrderDetails", new { FullName=item.FullName }) </h3>
+                    <h3    style="color:white; padding-right:20px;font-size:20px">@Html.ActionLink("Deleteorder", "Deleteorder", new { FullName=item.FullName })</h3>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</div>
