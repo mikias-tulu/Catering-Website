@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - adminautentication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/adminautentication.styles.css" asp-append-version="true" />
+	<link href="~/css/style-starter.css" rel="stylesheet" />
+	<script src="~/js/all.js"></script>
+    <script src="~/js/app.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery-3.3.1.min.js"></script>
+	<script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/particles.min.js.js"></script>
+	<script src="~/js/script.js"></script>
+	<script src="~/js/popper.min.js"></script>
+   <script src="~/js/site.js"></script>
+	<a href="~/fonts/fontawesome.otf"></a>
+	<a href="~/fonts/fontawesome-webfont.eot"></a>
+	<a href="~/fonts/fontawesome-webfont.ttf"></a>
+    <a href="~/fonts/fontawesome-webfont.woff"></a>
+	<a href="~/fonts/fontawesome-webfont.woff2"></a>
+
+
+
+</head>
+<body id="home">
+
+    <section class=" w3l-header-4 header-sticky">
+        <!--header-->
+        <header id="site-header" class="fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                    <a class="navbar-brand  nav-link   " asp-area="" asp-controller="Home" asp-action="Index">
+                   
+                        <span class="fa fa-cutlery"></span>Sweet 
+                    </a>
+                   
+                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item  @@services__active">
+                                <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+							<li class="nav-item  @@services__active">
+								<a class="nav-link " asp-area="" asp-controller="Home" asp-action="Privacy">Gallery</a>
+							</li>
+                            <li class="nav-item  @@services__active">
+                                <a class="nav-link " asp-area="" asp-controller="Order" asp-action="Index">Order Now</a>
+                            </li>
+                             <li class="nav-item  @@services__active">
+                                <a class="nav-link " asp-area="" asp-controller="Secured" asp-action="Index">All Orders</a>
+                            </li>
+
+                            @{
+                                if (User?.Identity?.IsAuthenticated ?? false)
+                                {
+									<li class="nav-item">
+										<u style="color:white;padding-right:10px;" >Welcome: @User.Identity.Name</u>
+                                        <a asp-controller="Account" asp-action="Logout" class="btn btn-danger">Logout</a>
+                                    </li>
+                                }
+                            }
+
+
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+   
+        
+  
+        </header>
+        <!--/header-->
+    </section>
+
+    
+<!-- //bootstrap working-->
+<!--/MENU-JS-->
+<script>
+	$(window).on("scroll", function () {
+	  var scroll = $(window).scrollTop();
+  
+	  if (scroll >= 80) {
+		$("#site-header").addClass("nav-fixed");
+	  } else {
+		$("#site-header").removeClass("nav-fixed");
+	  }
+	});
+  
+	//Main navigation Active Class Add Remove
+	$(".navbar-toggler").on("click", function () {
+	  $("header").toggleClass("active");
+	});
+	$(document).on("ready", function () {
+	  if ($(window).width() > 991) {
+		$("header").removeClass("active");
+	  }
+	  $(window).on("resize", function () {
+		if ($(window).width() > 991) {
+		  $("header").removeClass("active");
+		}
+	  });
+	});
+  </script>
+  <!--//MENU-JS-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+$(function () {
+  $('.navbar-toggler').click(function () {
+    $('body').toggleClass('noscroll');
+  })
+});
+</script>
+<script>
+$(function () {
+  $('.navbar-toggler').click(function () {
+    $('body').toggleClass('noscroll');
+  })
+});
+</script>
+    
+
+    
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+
+
+            @RenderBody()
+        </main>
+    </div>
+
+
+	<section class="w3l-footer-29-main">
+		<div class="footer-29 py-5 text-center">
+			<div class="container">
+				<div class="footer-list-29 footer-1 ">
+					<h2><a href="index.html" class="footer-logo"><span class="fa fa-cutlery"></span> Sweet </a></h2>
+					<p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui repellat nam vero consectetur dicta eos suscipit. Numquam at minus architecto asperiores cupiditate. At molestias laborum voluptatibus numquam aperiam in.</p>
+
+				</div>
+				<div class="row footer-top-29">
+
+					<div class="col-lg-4 col-md-4 col-sm-6 footer-list-29 footer-2 ">
+						<h6 class="footer-title-29">Address</h6>
+						<ul>
+							<li><p><span class="fa fa-map-marker"></span>  Bole Atlas, #32841 block, #221DRS Real estate business building, AA</p></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 footer-list-29 footer-2 ">
+						<h6 class="footer-title-29">Opening Hours</h6>
+						<ul>
+							<li><p><span>Mon-Fri:</span> 9AM-11PM</p></li>
+							<li><p><span>Sat-Sun:</span> 10AM-1PM</p></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 footer-list-29 footer-2 ">
+						<h6 class="footer-title-29">Contact Us</h6>
+						<ul>
+							<li><a href="tel:+7-800-999-800"><span class="fa fa-phone"></span> +(21)-255-999-8888</a></li>
+							<li><a href="mailto:corporate-mail@support.com" class="mail"><span class="fa fa-envelope-open-o"></span> sweet-mail@support.com</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section>
+	
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
