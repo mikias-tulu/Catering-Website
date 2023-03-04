@@ -1,0 +1,56 @@
+﻿@model adminautentication.Models.CustomerEntity
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style=" padding-bottom:20px;  color:white;padding-top:100px">Order Now</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateorderPost">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group" style=" color:white;">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group"style=" color:white;">
+                <label asp-for="Phonenumber" class="control-label"></label>
+                <input asp-for="Phonenumber" class="form-control" />
+                <span asp-validation-for="Phonenumber" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group" style=" color:white;">
+                <label asp-for="Dateofevent" class="control-label"></label>
+                <input asp-for="Dateofevent" class="form-control" />
+                <span asp-validation-for="Dateofevent" class="text-danger"></span>
+            </div>
+            <div class="form-group" style=" color:white;">
+                <label asp-for="Eventlocation" class="control-label"></label>
+                <input asp-for="Eventlocation" class="form-control" />
+                <span asp-validation-for="Eventlocation" class="text-danger"></span>
+            </div> 
+            <div class="form-group" style=" color:white;">
+                <label asp-for="Typeofevent" class="control-label"></label>
+                <input asp-for="Typeofevent" class="form-control" />
+                <span asp-validation-for="Typeofevent" class="text-danger"></span>
+            </div>
+            <div class="form-group" style=" color:white;">
+                <label asp-for="Numberofguest" class="control-label"></label>
+                <input asp-for="Numberofguest" class="form-control" />
+                <span asp-validation-for="Numberofguest" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group" >
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
